@@ -33,6 +33,18 @@ module.exports = function(grunt) {
       }
     },
 
+    //uncss
+    uncss: {
+      dist: {
+        options: {
+              ignore: ['/active/', '/active-video/']
+            },
+        files: {
+          "build/css/styles.css": ["build/index.html"]
+        }
+      }
+    },
+
     //autoprefixer
     autoprefixer: {
       options: {
@@ -101,6 +113,7 @@ module.exports = function(grunt) {
     "autoprefixer",
     "cmq",
     "cssmin",
+    //"uncss"
     //"imagemin"
   ]);
 
